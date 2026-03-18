@@ -1,0 +1,11 @@
+{
+  "name": "pia-green-expo-screenshot",
+  "version": "1.0.0",
+  "description": "Screenshot tool for pia-green-expo pages",
+  "scripts": {
+    "install-browsers": "playwright install chromium"
+  },
+  "dependencies": {
+    "playwright": "^1.41.0"
+  }
+}

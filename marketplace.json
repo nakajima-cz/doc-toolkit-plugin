@@ -1,0 +1,15 @@
+{
+  "plugins": [
+    {
+      "name": "doc-toolkit",
+      "description": "ソースコードから設計書・ER図・画面遷移図・調査レポートを自動生成するドキュメント生成ツールキット",
+      "version": "1.0.0",
+      "source": {
+        "type": "github",
+        "repository": "nakajima/doc-toolkit-plugin",
+        "ref": "main",
+        "path": "."
+      }
+    }
+  ]
+}

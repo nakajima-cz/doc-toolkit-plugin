@@ -1,0 +1,17 @@
+{
+  "name": "doc-toolkit",
+  "version": "1.0.0",
+  "description": "ソースコードから設計書・ER図・画面遷移図・調査レポートを自動生成するドキュメント生成ツールキット。project-setup でオンボーディング後、各種エージェントが任意のプロジェクトで動作します。",
+  "author": {
+    "name": "nakajima"
+  },
+  "license": "MIT",
+  "keywords": [
+    "documentation",
+    "design-doc",
+    "api-spec",
+    "er-diagram",
+    "screen-spec",
+    "code-investigation"
+  ]
+}
