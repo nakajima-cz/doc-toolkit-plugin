@@ -1,15 +1,24 @@
 {
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "doc-toolkit-marketplace",
+  "description": "ソースコードからドキュメントを自動生成するツールキットのマーケットプレイス",
+  "owner": {
+    "name": "nakajima-cz",
+    "email": "nakajima@creadorz.com"
+  },
   "plugins": [
     {
       "name": "doc-toolkit",
       "description": "ソースコードから設計書・ER図・画面遷移図・調査レポートを自動生成するドキュメント生成ツールキット",
-      "version": "1.0.0",
+      "category": "development",
+      "author": {
+        "name": "nakajima-cz"
+      },
       "source": {
-        "type": "github",
-        "repository": "nakajima-cz/doc-toolkit-plugin",
-        "ref": "main",
-        "path": "."
-      }
+        "source": "github",
+        "repo": "nakajima-cz/doc-toolkit-plugin"
+      },
+      "homepage": "https://github.com/nakajima-cz/doc-toolkit-plugin"
     }
   ]
 }
