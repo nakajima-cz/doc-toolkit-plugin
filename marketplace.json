@@ -6,7 +6,7 @@
       "version": "1.0.0",
       "source": {
         "type": "github",
-        "repository": "nakajima/doc-toolkit-plugin",
+        "repository": "nakajima-cz/doc-toolkit-plugin",
         "ref": "main",
         "path": "."
       }
