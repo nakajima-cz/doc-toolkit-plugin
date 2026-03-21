@@ -269,7 +269,7 @@ const cartItems: any[] = [];
 
 ## 品質チェック（実装完了前に確認）
 
-`.claude/skills/frontend-implement/references/implementation-checklist.md` を参照して確認する。
+`references/implementation-checklist.md` を参照して確認する。
 
 ---
 
