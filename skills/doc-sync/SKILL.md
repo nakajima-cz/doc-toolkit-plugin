@@ -62,6 +62,29 @@ bash .claude/skills/doc-sync/check-stale-docs.sh
 
 件数が 0 件の場合は「すべてのドキュメントが最新です」と報告して終了する。
 
+### Step 3.5:【確認②】更新内容の差分提示とユーザー承認
+
+ドキュメントの更新を開始する前に、各ドキュメントで何が変わるかをユーザーに提示し、承認を得る。
+
+```
+## 更新予定のドキュメント差分
+
+以下のドキュメントを更新します。確認してください。
+
+### backend/api/cart/POST_cart.md
+- リクエストボディに `coupon_code` フィールドを追加（文字列・任意）
+- レスポンス例を最新の実装に合わせて更新
+
+### frontend/screens/cart/cart.md
+- カートページの表示項目にクーポン入力欄を追加
+- ...
+
+上記の更新を適用してよいですか？
+```
+
+**ユーザーが承認するまで、doc生成スキルの起動を行わない。**
+ユーザーが一部のドキュメントのみ更新を指示した場合は、その指示に従って対象を絞る。
+
 ### Step 4: ドキュメントを自動更新する
 
 検出された各アイテムに対して、Taskツールで `path-mapping.md` に記載された対応エージェントをspawnする。
@@ -105,6 +128,60 @@ bash .claude/skills/doc-sync/check-stale-docs.sh
 スキップ（変更なし）: XX件
 エラー: XX件（あれば詳細）
 ```
+
+---
+
+## 即時同期モード（backend-implement / frontend-implement から呼ばれる場合）
+
+`backend-implement` または `frontend-implement` スキルからコード変更後に呼ばれる場合は、
+**即時同期モード**で動作する。git 履歴を参照する代わりに、受け取ったファイルリストを使用する。
+
+### 即時同期モードの判定
+
+呼び出し側のプロンプトに「即時同期モードで実行してください」または「--immediate」が含まれている場合、
+このモードで動作する。
+
+### 即時同期モードのフロー
+
+#### Step I-1: 変更ファイルリストを受け取る
+
+呼び出し側（backend-implement / frontend-implement / feature-implement）から
+渡された変更ファイルリストを使用する。check-stale-docs.sh は実行しない。
+
+#### Step I-2: パスマッピングで影響ドキュメントを解決する
+
+`path-mapping.md` を参照し、変更ファイルに対応するドキュメントを特定する。
+
+| 変更ファイルのパターン | 対応する設計書 | 使用するエージェント |
+|---|---|---|
+| backend/function/{category}/ | backend/api/{category}/ | backend-detail-doc |
+| {app}/pages/{screen}/ | {app}/screens/{screen}/ | frontend-spec-doc |
+| db_scheme.sql / マイグレーション | backend/er/ | er-diagram-gen |
+| モデルファイル | backend/docs/models/ | db-model-doc |
+
+ページ・コンポーネントの変更が含まれる場合は `screen-transition-gen` も更新対象に追加する。
+
+#### Step I-3: 影響ドキュメントの一覧と差分予測を提示する
+
+**通常モードの Step 3.5 と同様に、ユーザーに確認を求める。**
+
+```
+## ドキュメント更新予定（即時同期）
+
+以下のドキュメントを更新します。確認してください。
+
+| ドキュメント | 更新理由 | 想定される変更内容 |
+|---|---|---|
+| {doc_path} | {src_path} が変更されたため | {変更内容の概要} |
+
+上記の更新を適用してよいですか？
+```
+
+#### Step I-4: 承認後にdoc生成スキルを起動する
+
+通常モードの Step 4 と同じルールで対応エージェントを起動する。
+
+---
 
 ## カスタマイズ方法
 
