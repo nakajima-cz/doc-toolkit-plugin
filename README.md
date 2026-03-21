@@ -84,12 +84,16 @@ ER図を作って                   → er-diagram-gen が起動
 画面遷移図を作って              → screen-transition-gen が起動
 〇〇を調べて                   → code-investigator が起動
 ドキュメントを同期して          → doc-sync が起動
+```
 
-APIを追加して                  → backend-implement が起動（実装→設計書更新）
-バックエンドを改修して          → backend-implement が起動（実装→設計書更新）
-この設計書を元にバックエンドを実装して → backend-implement が起動（doc-first モード）
-画面を実装して                 → frontend-implement が起動（実装→設計書更新）
-〇〇機能を実装して              → feature-implement が起動（フルスタック実装）
+### コード実装（設計書自動更新付き）
+
+```
+APIを追加して                          → backend-implement が起動（実装→設計書更新）
+バックエンドを改修して                  → backend-implement が起動（実装→設計書更新）
+この設計書を元にバックエンドを実装して   → backend-implement が起動（doc-first モード）
+画面を実装して                         → frontend-implement が起動（実装→設計書更新）
+〇〇機能を実装して                     → feature-implement が起動（フルスタック実装）
 ```
 
 ## project-config.md について
