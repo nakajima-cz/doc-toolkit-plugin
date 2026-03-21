@@ -150,10 +150,8 @@ bash .claude/skills/doc-sync/check-stale-docs.sh
 
 #### Step I-2: パスマッピングで影響ドキュメントを解決する
 
-`path-mapping.md` に定義された**唯一の**パスマッピング表を参照し、
+`.claude/skills/doc-sync/references/path-mapping.md` に定義された**唯一の**パスマッピング表を参照し、
 変更ファイルに対応するドキュメントと使用するエージェントを特定する。
-
-パスマッピングの詳細は `references/path-mapping.md` を唯一の情報源とする。
 ここに重複して定義しない。
 
 #### Step I-3: 影響ドキュメントの一覧と差分予測を提示する

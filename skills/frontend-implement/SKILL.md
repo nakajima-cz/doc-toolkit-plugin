@@ -229,6 +229,7 @@ export const CartPage: React.FC = () => {
   const { cartItems, totalPrice, addItem, removeItem } = useCart();
   const { couponCode, applyCoupon, discountAmount } = useCoupon(cartItems);
   // ...表示ロジックのみ
+};
 
 // 悪い例: コンポーネントに API 呼び出し・状態管理・表示ロジックが混在する
 export const CartPage: React.FC = () => {
@@ -238,6 +239,7 @@ export const CartPage: React.FC = () => {
     fetch('/api/cart').then(res => res.json()).then(data => setCartItems(data));
   }, []);
   // ...長いコンポーネント
+};
 ```
 
 **型定義は明示的に書き、any を避ける**

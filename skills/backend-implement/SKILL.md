@@ -230,6 +230,10 @@ def handler(event:, context:)
       user = verify_token(event['headers']['Authorization'])
       if user
         # ...深いネストが続く
+      end
+    end
+  end
+end
 ```
 
 **複雑な条件式はローカル変数か述語メソッドに切り出す**

@@ -4,11 +4,16 @@
 
 ## 含まれるスキル / エージェント
 
-### ドキュメント生成
+### セットアップ
 
 | 名前 | 種別 | 説明 |
 |------|------|------|
 | `project-setup` | skill/agent | プロジェクトのオンボーディング。コードベースを探索し `project-config.md` を自動生成 |
+
+### ドキュメント生成
+
+| 名前 | 種別 | 説明 |
+|------|------|------|
 | `frontend-spec-doc` | skill/agent | フロントエンド画面機能仕様書の生成（イベント駆動型） |
 | `api-doc-generator` | skill/agent | バックエンドAPI設計書の生成 |
 | `backend-detail-doc` | skill/agent | バックエンド詳細設計書の生成（関数/メソッド単位） |
