@@ -188,14 +188,23 @@ doc-sync が不要な場合はスキップする（ユーザーに確認）。
   - CONFIG_STATUS: CONFIGURED
 
 以下のskill/agentが使用可能になりました:
+
+**ドキュメント生成**
 - frontend-spec-doc: 画面機能仕様書の生成
 - api-doc-generator: API設計書の生成
 - backend-detail-doc: バックエンド詳細設計書の生成
 - db-model-doc: DBモデルドキュメントの生成
 - er-diagram-gen: ER図の生成
-- code-investigator: コードベースの横断調査
 - screen-transition-gen: 画面遷移図の生成
-- doc-sync: ドキュメントの同期チェック
+
+**コード実装（設計書の自動更新付き）**
+- backend-implement: バックエンドコードの新規作成・改修（code-first / doc-first 両対応）
+- frontend-implement: フロントエンドコードの新規作成・改修（code-first / doc-first 両対応）
+- feature-implement: フルスタック機能実装のオーケストレーター
+
+**調査・メンテナンス**
+- code-investigator: コードベースの横断調査
+- doc-sync: ドキュメントの同期チェック・即時更新
 - screenshot: スクリーンショット撮影
 
 {要確認項目があれば一覧表示}
