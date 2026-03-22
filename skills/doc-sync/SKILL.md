@@ -174,7 +174,7 @@ bash .claude/skills/doc-sync/check-stale-docs.sh
 上記の更新を適用してよいですか？
 ```
 
-#### Step I-4: 承認後にdoc生成スキルを起動する
+#### Step I-4: 承認後に対応エージェント（doc生成エージェント）を起動する
 
 通常モードの Step 4 と同じルールで対応エージェントを起動する。
 
