@@ -8,7 +8,7 @@
 
 | 名前 | 種別 | 説明 |
 |------|------|------|
-| `project-setup` | skill/agent | プロジェクトのオンボーディング。コードベースを探索し `project-config.md` を自動生成 |
+| `project-setup` | skill/agent | プロジェクトのオンボーディング。コードベースを探索し `.claude/project-config.md` を自動生成 |
 
 ### ドキュメント生成
 
@@ -72,7 +72,7 @@ claude --plugin-dir /path/to/doc-toolkit-plugin
 project-setup を実行して
 ```
 
-コードベースが自動的に探索され、`project-config.md` が生成されます。
+コードベースが自動的に探索され、`.claude/project-config.md` が生成されます。
 
 ### 各種ドキュメント生成
 

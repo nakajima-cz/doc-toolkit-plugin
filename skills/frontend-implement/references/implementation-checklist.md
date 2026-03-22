@@ -18,8 +18,8 @@
 
 ## 2. プロジェクト規約チェック
 
-- [ ] ルーティング方式が `project-config.md` のフレームワーク設定と一致している
-- [ ] APIクライアントは `project-config.md` に記載の場所（api/ or services/ 等）に配置した
+- [ ] ルーティング方式が `.claude/project-config.md` のフレームワーク設定と一致している
+- [ ] APIクライアントは `.claude/project-config.md` に記載の場所（api/ or services/ 等）に配置した
 - [ ] 認証が必要なページ・コンポーネントに認証ガードを適用した
 - [ ] 状態管理の方式（Context / Zustand / Pinia 等）が既存と統一されている
 - [ ] 画面遷移のパターン（`router.push` 等）がプロジェクトの既存パターンと統一されている

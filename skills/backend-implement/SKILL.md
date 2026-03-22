@@ -13,7 +13,7 @@ description: バックエンドコードの新規作成・改修を行うスキ�
 
 - `.claude/project-config.md` — 技術スタック、ディレクトリ構造、ファイル配置ルール、認証方式
 
-`project-config.md` の先頭に `CONFIG_STATUS: UNCONFIGURED` が含まれている場合は作業を開始せず、
+`.claude/project-config.md` の先頭に `CONFIG_STATUS: UNCONFIGURED` が含まれている場合は作業を開始せず、
 `project-setup` スキルを実行するようユーザーに案内してください。
 
 ---
@@ -87,7 +87,7 @@ description: バックエンドコードの新規作成・改修を行うスキ�
 
 ### Step 5: 設計書の自動更新
 
-`doc-sync` スキルを即時モード（`--immediate` フラグ）で呼び出し、設計書更新を委譲する。
+`doc-sync` スキルを即時モードで呼び出し、設計書更新を委譲する。
 doc-sync への指示テンプレート:
 
 ```

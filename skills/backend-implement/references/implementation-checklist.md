@@ -18,9 +18,9 @@
 
 ## 2. プロジェクト規約チェック
 
-- [ ] ハンドラのシグネチャが `project-config.md` の定義と一致している
+- [ ] ハンドラのシグネチャが `.claude/project-config.md` の定義と一致している
 - [ ] 認証が必要なエンドポイントに認証検証関数を適用している
-- [ ] 共通ライブラリは `project-config.md` に記載のパスから require / import している
+- [ ] 共通ライブラリは `.claude/project-config.md` に記載のパスから require / import している
 - [ ] エラーレスポンスのフォーマットが既存のAPIと統一されている
 - [ ] 環境変数を追加した場合、IaC 定義ファイル（template.yaml 等）にも追記した
 

@@ -13,7 +13,7 @@ description: フロントエンドコードの新規作成・改修を行うス�
 
 - `.claude/project-config.md` — フレームワーク・ディレクトリ構造・APIクライアントの場所・状態管理の方式
 
-`project-config.md` の先頭に `CONFIG_STATUS: UNCONFIGURED` が含まれている場合は作業を開始せず、
+`.claude/project-config.md` の先頭に `CONFIG_STATUS: UNCONFIGURED` が含まれている場合は作業を開始せず、
 `project-setup` スキルを実行するようユーザーに案内してください。
 
 ---
@@ -88,7 +88,7 @@ description: フロントエンドコードの新規作成・改修を行うス�
 
 ### Step 5: 設計書の自動更新
 
-`doc-sync` スキルを即時モード（`--immediate` フラグ）で呼び出し、設計書更新を委譲する。
+`doc-sync` スキルを即時モードで呼び出し、設計書更新を委譲する。
 フロントエンドの変更は以下の設計書に影響する可能性があるため、漏れなく含める。
 
 - ページ・コンポーネントの変更 → `frontend-spec-doc`（画面機能仕様書）
