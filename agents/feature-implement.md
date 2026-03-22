@@ -16,7 +16,7 @@ model: sonnet
 
 ### 設定チェック
 
-`project-config.md` を読み込んだ際に、先頭付近に `CONFIG_STATUS: UNCONFIGURED` が含まれている場合:
+`.claude/project-config.md` を読み込んだ際に、先頭付近に `CONFIG_STATUS: UNCONFIGURED` が含まれている場合:
 
 1. **作業を開始せず**、以下の警告をユーザーに表示してください:
 

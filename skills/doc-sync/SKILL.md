@@ -186,7 +186,7 @@ bash .claude/skills/doc-sync/check-stale-docs.sh
 新しいプロジェクトで doc-sync を使用する場合、以下のファイルを編集してください:
 
 1. **`.claude/skills/doc-sync/references/path-mapping.md`** — ソース → ドキュメントの対応表を記述
-2. **`check-stale-docs.sh`** — シェルスクリプト内のパスマッピング（`BACKEND_MAP` 等）と `SRC_DIR` / `DOC_DIR` を更新
+2. **`.claude/skills/doc-sync/check-stale-docs.sh`** — シェルスクリプト内のパスマッピング（`BACKEND_MAP` 等）と `SRC_DIR` / `DOC_DIR` を更新
 
 ## 注意事項
 

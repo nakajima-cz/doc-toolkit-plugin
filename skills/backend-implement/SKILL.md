@@ -267,7 +267,7 @@ raise CartError, "追加不可" unless user.active? && !cart.locked? && cart.ite
 ## 注意事項
 
 - 既存ファイルを修正する前に必ず Read して現状を把握してから手を入れる
-- 認証・認可処理は `project-config.md` に記載の認証検証関数を正しく使用する
+- 認証・認可処理は `.claude/project-config.md` に記載の認証検証関数を正しく使用する
 - DB操作を伴う場合、トランザクション処理の要否を確認する
 - 環境変数の追加が必要な場合は IaC 定義ファイル（template.yaml 等）にも追記する
 - テストファイルの作成・更新が必要かどうかはユーザーに確認してから行う
