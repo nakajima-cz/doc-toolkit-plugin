@@ -9,6 +9,7 @@
   "plugins": [
     {
       "name": "doc-toolkit",
+      "version": "1.1.0",
       "description": "ソースコードから設計書・ER図・画面遷移図・調査レポートを自動生成するドキュメント生成ツールキット",
       "category": "development",
       "author": {
