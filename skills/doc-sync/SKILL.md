@@ -14,7 +14,7 @@ description: ソースコードの最新コミットとドキュメントの更�
 1. `.claude/project-config.md` — プロジェクト固有の技術スタック・ディレクトリ構造
 2. `.claude/skills/doc-sync/references/path-mapping.md` — ソース → ドキュメントのパスマッピング
 
-`project-config.md` の「doc-sync 設定」セクションからパスマッピング・除外パターンの概要を把握し、
+`.claude/project-config.md` の「doc-sync 設定」セクションからパスマッピング・除外パターンの概要を把握し、
 `path-mapping.md` で詳細な対応関係を確認してください。
 
 > **注意**: `path-mapping.md` と `check-stale-docs.sh` はプロジェクト固有の設定です。
@@ -135,15 +135,16 @@ bash .claude/skills/doc-sync/check-stale-docs.sh
 
 ---
 
-## 即時同期モード（実装系エージェントから呼ばれる場合）
+## 即時同期モード（実装系エージェント向けオプション機能）
 
-`backend-implement` / `frontend-implement` / `feature-implement` からコード変更後に呼ばれる場合は、
-**即時同期モード**で動作する。git 履歴を参照する代わりに、受け取ったファイルリストを使用する。
+`backend-implement` / `frontend-implement` / `feature-implement` からコード変更後に呼び出され、
+**明示的に即時同期を指示された場合**は、git 履歴を参照する代わりに受け取ったファイルリストを使用して
+**即時同期モード**で動作する。それ以外の場合は通常モード（git 履歴ベース）で動作する。
 
 ### 即時同期モードの判定
 
-呼び出し側のプロンプトに「即時同期モードで実行してください」または「--immediate」が含まれている場合、
-このモードで動作する。
+呼び出し側のプロンプトに「即時同期モードで実行してください」が含まれている場合に、このモードで動作する。
+含まれていない場合は通常モードで動作する。
 
 ### 即時同期モードのフロー
 
@@ -184,7 +185,7 @@ bash .claude/skills/doc-sync/check-stale-docs.sh
 
 新しいプロジェクトで doc-sync を使用する場合、以下のファイルを編集してください:
 
-1. **`references/path-mapping.md`** — ソース → ドキュメントの対応表を記述
+1. **`.claude/skills/doc-sync/references/path-mapping.md`** — ソース → ドキュメントの対応表を記述
 2. **`check-stale-docs.sh`** — シェルスクリプト内のパスマッピング（`BACKEND_MAP` 等）と `SRC_DIR` / `DOC_DIR` を更新
 
 ## 注意事項

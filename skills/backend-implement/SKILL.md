@@ -249,7 +249,7 @@ raise CartError, "追加不可" unless user.active? && !cart.locked? && cart.ite
 
 ### 4. プロジェクト固有の規約遵守
 
-`project-config.md` に記載された以下を必ず参照・遵守する:
+`.claude/project-config.md` に記載された以下を必ず参照・遵守する:
 
 - ハンドラのシグネチャ（関数の入口の書き方）
 - 認証検証関数の使用方法とロール定義

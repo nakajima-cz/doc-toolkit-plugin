@@ -23,7 +23,7 @@ model: sonnet
    > ⚠️ `.claude/project-config.md` が初期状態（未設定）のままです。
    > このまま実行すると正しいディレクトリやファイルを参照できません。
    >
-   > 先に `project-setup` スキルを実行するか、`project-config.md` を手動で設定してください。
+   > 先に `project-setup` スキルを実行するか、`.claude/project-config.md` を手動で設定してください。
 
 2. ユーザーが続行を明示的に指示した場合のみ、作業を開始する
 
